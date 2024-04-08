@@ -65,7 +65,7 @@
     font-size: 5px;
 }
 
-button {
+.num-btn {
     width: 60px;
     height: 60px;
     background-color: #bbbbbb;
