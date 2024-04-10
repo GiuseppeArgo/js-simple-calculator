@@ -30,25 +30,24 @@ function createNumBtn(number) {
 function handleOperatorClick() {
     console.log(this);
     // Salvo l'operatore
-    const operator = this.dataset.operator;
+    let operator = this.dataset.operator;
     console.log(operator);
-    const firstNum = parseInt(displayValue.innerText);
+    let firstNum = parseInt(displayValue.innerText);
     displayValue.innerText = 0;
     console.log(operator, firstNum);
-
 };
 
 
 function handleCalculateClick() {
     console.log("calculate");
     //salvare il secondo operando
-    const secondNum = parseInt(displayValue.innerText)
+    let secondNum = parseInt(displayValue.innerText)
     console.log(firstNum, secondNum, operator);
     //effetuare il calcolo
-    const result = calculate(firstNum, secondNum, operator);
+    let result = calculate(firstNum, secondNum, operator);
     //visualizzare il risultato in alto
     displayValue.innerText = result;
-}
+};
 
 /**
  * Description
@@ -60,7 +59,7 @@ function handleCalculateClick() {
 function calculate(first, second, operation) {
     let result;
     switch (operation) {
-        case "somma":
+        case "addizione":
             result = first + second;
             break;
         
@@ -79,8 +78,12 @@ function calculate(first, second, operation) {
     return result;
 };
 
-
-
+// function reset() {
+//     firstNum = 0;
+//     operator = "";
+//     secondNum = 0;
+//     displayValue.innerText = 0;
+// }
 
 
 

@@ -15,11 +15,11 @@ const displayValue = document.querySelector(".zero");
 
 // Variabili globali di stato del calcolo
 
-const firstNum = 0;
+let firstNum = 0;
 
-const secondNum = 0;
+let secondNum = 0;
 
-const operator = "";
+let operator = "";
 
 let resultOperation = 0;
 
@@ -58,15 +58,9 @@ calculateBtn.addEventListener("click", handleCalculateClick)
 
 // Aggiung Event Listener ad C
 
-const reset
+// const reset = "";
 
 
-// const operatorBtns = document.querySelectorAll(".operator");
-
-// for (let i = 0; i < operatorBtns.length; i++) {
-//     operatorBtns[i].addEventListener("click", operators)
-//     console.log(firstNum);
-// };
 
 
 
