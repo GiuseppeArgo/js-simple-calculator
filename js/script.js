@@ -13,38 +13,48 @@ for (let i = 1; i <= 11; i++){
 const displayValue = document.querySelector(".zero");
 
 
-// Salvo i numeri e gli operatori in una variabile
+// Variabili globali di stato del calcolo
 
-let firstNum = 0;
+const firstNum = 0;
 
-let secondNum = 0;
+const secondNum = 0;
 
-let operator = "";
+const operator = "";
 
 let resultOperation = 0;
 
 
 // Aggiungo Event Listener ad i numeri
 
-const numBtns = document.querySelectorAll(".num-btn");
+ const numBtns = document.querySelectorAll(".num-btn");
 
 for (let i = 0; i < numBtns.length; i++) {
     numBtns[i].addEventListener("click", function() {
+    if (displayValue.innerText === "0") {
+        displayValue.innerText = this.innerText;
+    } else {
         displayValue.innerText += this.innerText;
-        console.log(firstNum);
+    }
     });
 };
 
 // Aggiungo Event Listener ad gli operatori
 
-const operatorBtns = document.querySelectorAll(".operator");
+const operatorBtns = document.querySelectorAll(".operator-btn")
 
 for (let i = 0; i < operatorBtns.length; i++) {
-    operatorBtns[i].addEventListener("click", operators)
-    if (operatorBtns.innerHTML === "=") {
-        operatorBtns[i].addEventListener("click", calculate)
-    };
-};
+    const currButton = operatorBtns[i];
+    console.log(currButton);
+    currButton.addEventListener("click", handleOperatorClick);
+}
+
+
+// const operatorBtns = document.querySelectorAll(".operator");
+
+// for (let i = 0; i < operatorBtns.length; i++) {
+//     operatorBtns[i].addEventListener("click", operators)
+//     console.log(firstNum);
+// };
 
 
 

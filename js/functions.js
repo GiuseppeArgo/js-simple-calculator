@@ -15,6 +15,7 @@ function createNumBtn(number) {
     } else if (number === 11) {
         btnElem.classList.add("orange");
         btnElem.classList.add("t-white");
+        btnElem.classList.add("equal")
         btnElem.innerText = "=";
     }
 
@@ -26,33 +27,38 @@ function createNumBtn(number) {
  * Description funzione per assegnare operatore ad i bottoni e resettare display value
  * 
  */
-function operators() {
-    let operator = this.value;
-    let firstNum = parseInt(displayValue.innerHTML);
-    displayValue.innerHTML = "";
+function handleOperatorClick() {
+    console.log(this);
+    // Salvo l'operatore
+    const operator = this.dataset.operator;
+    console.log(operator);
+    const firstNum = parseInt(displayValue.innerText);
+    displayValue.innerText = 0;
+    console.log(operator, firstNum);
+
 };
 
 
-function calculate() {
-    let secondNum = parseInt(displayValue.innerHTML);
-    switch (operator) {
-        case "+":
-            displayValue.innerHTML = "" + (firstNum + secondNum);
-            break;
+// function calculate() {
+//     let secondNum = parseInt(displayValue.innerHTML);
+//     switch (operator) {
+//         case "+":
+//             displayValue.innerHTML = "" + (firstNum + secondNum);
+//             break;
 
-        case "-":
-            displayValue.innerHTML = "" + (firstNum - secondNum);
-            break;
+//         case "-":
+//             displayValue.innerHTML = "" + (firstNum - secondNum);
+//             break;
 
-        case "x":
-            displayValue.innerHTML = "" + (firstNum * secondNum);
-            break;
+//         case "x":
+//             displayValue.innerHTML = "" + (firstNum * secondNum);
+//             break;
 
-        case "÷":
-            displayValue.innerHTML = "" + (firstNum / secondNum);
-            break;
+//         case "÷":
+//             displayValue.innerHTML = "" + (firstNum / secondNum);
+//             break;
         
-        default:
-            break;
-    };
-};
+//         default:
+//             break;
+//     };
+// };
