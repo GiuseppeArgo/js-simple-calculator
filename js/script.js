@@ -48,6 +48,18 @@ for (let i = 0; i < operatorBtns.length; i++) {
     currButton.addEventListener("click", handleOperatorClick);
 }
 
+// Aggiungo Event Listener ad uguale
+
+const calculateBtn = document.querySelector(".equal")
+
+console.log(calculateBtn);
+
+calculateBtn.addEventListener("click", handleCalculateClick)
+
+// Aggiung Event Listener ad C
+
+const reset
+
 
 // const operatorBtns = document.querySelectorAll(".operator");
 

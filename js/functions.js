@@ -39,6 +39,52 @@ function handleOperatorClick() {
 };
 
 
+function handleCalculateClick() {
+    console.log("calculate");
+    //salvare il secondo operando
+    const secondNum = parseInt(displayValue.innerText)
+    console.log(firstNum, secondNum, operator);
+    //effetuare il calcolo
+    const result = calculate(firstNum, secondNum, operator);
+    //visualizzare il risultato in alto
+    displayValue.innerText = result;
+}
+
+/**
+ * Description
+ * @param {number} first
+ * @param {number} second
+ * @param {string} operation
+ * @returns {number}
+ */
+function calculate(first, second, operation) {
+    let result;
+    switch (operation) {
+        case "somma":
+            result = first + second;
+            break;
+        
+        case "sottrazione":
+            result = first - second;
+            break;
+        
+        case "moltiplicazione":
+            result = first * second;
+            break;
+        
+        case "divisione":
+            result = first / second;
+            break;
+    }
+    return result;
+};
+
+
+
+
+
+
+
 // function calculate() {
 //     let secondNum = parseInt(displayValue.innerHTML);
 //     switch (operator) {

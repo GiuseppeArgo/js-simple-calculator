@@ -6,11 +6,11 @@ Attenzione: La nostra calcolatrice deve fare dei calcoli tra due numeri interi. 
 quando si clicca su un numero, concatenarlo al numero visualizzato in alto
 
 2. MILESTONE 2
- - [ ] Aggiungere event listener a tutti gli operatori
+ - [x] Aggiungere event listener a tutti gli operatori
 quando si clicca su un operatore, salvare l'operatore cliccato e il primo operando, quindi resettare il numero in alto
 
 3. MILESTONE 3
- - [ ] Aggiungere event listener al pulsante =
+ - [x] Aggiungere event listener al pulsante =
 quando si clicca su =, salvare il secondo operando, effetuare il calcolo corretto in base all'operatore selezionato e visualizzare il risultato in alto
 
 4. MILESTONE 4
